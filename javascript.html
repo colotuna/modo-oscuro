@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			background-color: lightyellow;
+		}
+		.caja{
+			margin: 20px auto;
+			height: 25px;
+			width: 60px;
+			border-radius: 20px;
+			border: 1px solid #333;
+			position: relative;
+			display: flex;
+			align-items: center;
+			background-color: darkorange;
+		}
+		.btn{
+			height: 20px;
+			width: 20px;
+			border-radius: 50%;
+			border: 1px solid #333;
+			position: absolute;
+			left: 0px;
+			background-color: #fff;
+		}
+		.btn-right{
+			height: 20px;
+			width: 20px;
+			border-radius: 50%;
+			border: 1px solid #333;
+			position: absolute;
+			left: 35px;
+		}
+		.fondo-azul{
+			background-color: darkslateblue;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="caja" id="contenedor">
+		<div class="btn" id="btn"></div>
+	</div>
+	<script>
+		const button = document.getElementById('btn');
+		const container = document.getElementById('contenedor');
+		container.addEventListener('click',()=>{
+			button.classList.toggle('btn-right');
+			document.querySelector('body').classList.toggle('fondo-azul');
+		})
+	</script>
+</body>
+</html>
